@@ -1,0 +1,110 @@
+.register-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px #007bff;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+#password-strength-meter {
+  margin-top: 20px;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  position: relative;
+}
+
+#password-strength-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.2s ease-in-out;
+}
+
+#password-strength-bar.weak {
+  background-color: #ff4d4d;
+}
+
+#password-strength-bar.medium {
+  background-color: #ffa500;
+}
+
+#password-strength-bar.strong {
+  background-color: #00c851;
+}
+
+#password-strength-text {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: right;
+  color: #9e9e9e;
+  height: 16px; /* reserve space for the message */
+  line-height: 16px;
+  overflow: hidden;
+}
+
+#password-strength-text.weak {
+  color: #ff4d4d;
+}
+
+#password-strength-text.medium {
+  color: #ffa500;
+}
+
+#password-strength-text.strong {
+  color: #00c851;
+}
